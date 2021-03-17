@@ -95,20 +95,20 @@ function remove(id) {
 }
 
   return (
-    <div class='container'>
-        <h3 class="mb-4">Shopping list</h3>
+    <div className='container'>
+        <h3 className="mb-4">Shopping list</h3>
         <form onSubmit={save}>
           <label>New product</label>
           <input value={product} type="text" onChange={e => setProduct(e.target.value)} placeholder="description" required></input>
           <input value={amount} type="number" onChange={e => setAmount(e.target.value)} placeholder="amount of product" required></input>
           <button>Add</button>
         </form>
-        <ul class="list">
+        <ul className="list">
           {products.map(product => (
-            <li key={product.id} class="row">
-              <p class="col">{product.description}</p>
-              <p class="col">{product.amount}</p> 
-              <p class="col">
+            <li key={product.id} className="row">
+              <p className="col">{product.description}</p>
+              <p className="col">{product.amount}</p> 
+              <p className="col">
                 <a className="delete" onClick={() => remove(product.id)} href="#">Delete</a>
               </p>           
             </li>
